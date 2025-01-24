@@ -1,0 +1,17 @@
+Main.py as the Main Entry Point for the Validation Program
+
+1.Specify the path for loading the case:
+	case_path = os.path.join('Competition case', 'num30_scenario_0.txt')
+
+2.Specify the path for loading the encoding file:
+	file_path = os.path.join('ending_log.txt').
+
+3.Call the scheduling module to generate a scheduling model:
+	Parse the encoding file.
+	Output the completion time and order fulfillment rate for each job arrival.
+
+4.The validation program will check if the encoding file meets the requirements:
+	Verify whether the processing sequence of operations satisfies the requirements.
+	Check if jobs are assigned to the specified parallel machines.
+	Ensure that no operations already started are rescheduled.
+	For scheduling plans that violate constraints, the validation program will output the specific error lines and problem descriptions.
