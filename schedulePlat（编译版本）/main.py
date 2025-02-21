@@ -24,7 +24,7 @@ if __name__ == '__main__':
     with open(file_path, "r") as file:
         for line in file:
             # 去掉行尾的换行符并将该行转换为列表（假设按空格或其他分隔符分割）
-            line_list = [int(item) for item in line.strip().split(",")]
+            line_list = [int(item) if item != "Null" else item for item in line.strip().split(",")]
             # 添加到结果列表
             lines_as_lists.append(line_list)
     #TODO 排程
