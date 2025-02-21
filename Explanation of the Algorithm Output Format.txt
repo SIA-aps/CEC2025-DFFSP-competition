@@ -7,6 +7,7 @@ Example of a Standard Algorithm Output File:
 
 1. Encoding Rules
 	The hybrid flow shop scheduling problem requires determining both the operation processing sequence and the equipment allocation. Therefore, a two-stage encoding method is used, combining the operation processing sequence and machine selection sequence (machine numbers start from 0). The encoding is divided into two parts: the operation sequence and the machine selection sequence.
+
 2. Explanation of the Example
 	This example represents the encoded scheduling plans for the dynamic arrival of five jobs. The n-th line indicates the scheduling plan when n-th the job arrives, reflecting the operation processing sequence and machine assignments (machine numbers starting from 0) for the jobs that have arrived.
 	
@@ -24,7 +25,11 @@ Example of a Standard Algorithm Output File:
 	The last eight digits 3,5,11,14,4,8,10,14 represent the machine assignments for Jobs 1 and 2:
 	Job 1: Operation 1 is assigned to Machine 3, Operation 2 to Machine 5, Operation 3 to Machine 11, and Operation 4 to Machine 14.
 	Job 2: Operation 1 is assigned to Machine 4, Operation 2 to Machine 8, Operation 3 to Machine 10, and Operation 4 to Machine 14.
-3. Rescheduling Detection Rules
+
+3.For operations that have not been assigned to machines within the timeout period, the dispatch order and the corresponding machine assignment code can be represented by 'Null'.
+	For example，Assuming that the code for the second job at the time of arrival is "0,5,Null,Null,1,2,3,4,3,5,Null,Null,4,8,10,14", this means that the last two operations of job 1 have not been assigned to machines.
+
+4. Rescheduling Detection Rules
 	If the encoding in a line changes in operation processing sequence or machine assignment compared to the previous line, the corresponding job is considered rescheduled. The scope of rescheduling is determined by the participants.
 
 	For example:
