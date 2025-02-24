@@ -1,3 +1,3 @@
 #
 
-from .shcedulingforCEC import scheduling_for_CEC
+from .schedulingforCEC import scheduling_for_CEC
