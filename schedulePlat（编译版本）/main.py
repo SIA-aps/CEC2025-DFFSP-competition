@@ -1,5 +1,5 @@
 import os,time
-from APS.algorithm.shcedulingforCEC import DffspForCEC
+from APS.algorithm.schedulingforCEC import DffspForCEC
 from APS import dffspCEC
 
 if __name__ == '__main__':
